@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="static/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src="static/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body id="t" class="offline">
@@ -33,14 +34,19 @@
     <div>
         <p style="text-align: center">Made with ❤ by <a href="https://www.linkedin.com/in/breno-poggiali/" style="color: black;" target="_blank">Breno Poggiali</a> and Mateus Rodrigues</p>
    </div>
-   <script>
-    document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    if (evt.keyCode == 32) {
-        var box = document.getElementById("messageBox");
-        box.style.visibility="hidden";
-    }
-};
-</script>
 
+   <script>
+        document.onkeydown = function(evt) {
+            evt = evt || window.event;
+            if ([32, 38].includes(evt.keyCode)) {
+                var box = document.getElementById("messageBox");
+                box.style.visibility="hidden";
+            }
+        };
+
+        $(document).on('click', function() {
+            var box = document.getElementById("messageBox");
+            box.style.visibility="hidden";
+        });
+    </script>
 </html>
