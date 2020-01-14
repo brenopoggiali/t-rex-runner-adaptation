@@ -84,7 +84,7 @@ singledispatch==3.4.0.3
 six==1.13.0
 subprocess32==3.5.4
 tensorflow==1.2.0
-tensorflow-gpu==1.2.0
+tensorflow-gpu==1.15.0
 terminado==0.8.3
 testpath==0.4.4
 tornado==5.1.1
